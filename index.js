@@ -150,6 +150,8 @@ app.get('/borrar', (req, res) => {
 	Question.remove({}, function(err) { 
    console.log('collection removed') 
    res.redirect('/');
+  });
+});
 
 app.get('/', (req, res) => {
   Question.find().populate('answers').exec((err, questions) => {
