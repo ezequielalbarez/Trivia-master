@@ -146,6 +146,7 @@ app.post('/question', (req, res) => {
   });
 });
 
+
 app.get('/borrar', (req, res) => {
 	Question.remove({}, function(err) { 
    console.log('collection removed') 
@@ -158,6 +159,7 @@ app.get('/', (req, res) => {
     res.render('index', { questions: questions, user: req.user });
   });
 });
+
 
 // ruta para signup
 app.get('/signup', (req, res, next) => {

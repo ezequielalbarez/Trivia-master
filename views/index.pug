@@ -6,7 +6,6 @@ html
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous")
       
   body
-  backgrond-color:#F3F3F8
     if (!user)
       h1 Login
       form(action='/login' method='post')
@@ -20,11 +19,12 @@ html
             
     else 
       h1 Bienvenido #{user.username}   
-      a(href='/logout') Logout     
-    div( class="col-md-8" style="margin-left: 80% !important")             
+      a(href='/logout') Logout 
+
+    div( class="col-md-8" style="margin-left: 190% !important")            
     h1 Trivia
     h4 Nueva pregunta 
-    div( class="col-md-8" style="margin-left: 80% !important")
+    div( class="col-md-8" style="margin-left: 100% !important")
     form(action='/question' method='post')
       input(name='question' placeholder='Pregunta')
       br  
@@ -41,6 +41,10 @@ html
       input(name='checkboxD' type='checkbox' value='true')
       br
       input(type='submit' class="btn btn-success" value='Guardar')
+      br
+      input( type='reset' class="btn btn-success" value='Borrar' a href='/Borrar')
+    br
+       
     br      
     ol
       each question in questions
