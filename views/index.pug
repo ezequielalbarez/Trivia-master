@@ -21,10 +21,10 @@ html
     else 
       h1 Bienvenido #{user.username}   
       a(href='/logout') Logout     
-                 
+    div( class="col-md-8" style="margin-left: 80% !important")             
     h1 Trivia
     h4 Nueva pregunta 
-    div( class="col-md-8" style="margin-left: 20% !important")
+    div( class="col-md-8" style="margin-left: 80% !important")
     form(action='/question' method='post')
       input(name='question' placeholder='Pregunta')
       br  
